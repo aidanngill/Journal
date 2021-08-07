@@ -8,12 +8,15 @@ class Session(object):
         is_json: bool = False,
         default_headers: dict = None,
         default_params: dict = None,
+        needs_authorization: bool = True,
     ):
         self.base_url = base_url
         self.is_json = is_json
 
         self.default_headers = default_headers
         self.default_params = default_params
+
+        self.needs_authorization = needs_authorization
 
         headers = {"User-Agent": "Journal/1.0"}
 
